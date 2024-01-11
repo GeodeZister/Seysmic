@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  width: 100%;
+  padding: 4% 2%;
+  box-sizing: border-box;
+  height: 100vh;
+}
+
+.box {
+  flex: 1;
+  overflow: hidden;
+  transition: .5s;
+  margin: 0 2%;
+  box-shadow: 0 20px 30px rgba(0,0,0,.1);
+  line-height: 0;
+}
+
+.box > a {
+  display: block; /* Makes the anchor block-level, allowing it to fill its container */
+  width: 100%; /* Ensures the anchor tag takes up the full width of its parent */
+  height: calc(100% - 10vh); /* Matches the height of the images */
+  line-height: 0; /* Neutralizes any inherited line heights that may affect size */
+  text-decoration: none; /* Removes underline from links */
+}
+
+.box > a > img {
+  width: 100%; /* Makes the image inside the anchor fill the anchor */
+  height: 100%; /* Matches the height of the anchor */
+  object-fit: cover; /* Ensures the aspect ratio of the image is preserved */
+}
+
+.box > span {
+  font-size: 3.8vh;
+  display: block;
+  text-align: center;
+  height: 10vh;
+  line-height: 2.6;
+  color: #FFFFFF;
+}
+
+.box:hover { flex: 1 1 50%; }
+.box:hover > img, .box:hover > a > img {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+    background-image: url('https://i.ibb.co/zPR6wQL/44.jpg');
+    background-color: #708090;
+}

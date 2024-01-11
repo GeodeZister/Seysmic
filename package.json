@@ -1,0 +1,22 @@
+{
+  "name": "seysmic",
+  "version": "1.0.0",
+  "description": "Web for Money Project",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel ./home/home.html"
+  },
+  "author": "Oleksandr H",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.10.3"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "mysql": "^2.18.1"
+  }
+}

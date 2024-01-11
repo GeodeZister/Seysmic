@@ -1,0 +1,185 @@
+body {
+  background-color: #2f539b;
+  background-image: url("https://i.ibb.co/NxWN2Qg/back.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#pageWrapper {
+  background-image: url("https://i.ibb.co/NxWN2Qg/back.jpg");
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  display: flex;
+}
+
+.container {
+  background-color: #fff;
+  border: 5px solid #000;
+  width: 900px;
+  height: 600px;
+  margin: 20px;
+  box-shadow: 0 4px 8px #0000001a;
+}
+
+.textBlock {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 1em;
+}
+
+.HeadertextBlock {
+  color: #fff;
+  margin: 10px 0;
+  font-size: 2.5em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  background: #4793e3;
+  font-family: Helvetica;
+}
+
+h2 {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 30px 0;
+  font-size: 18px;
+}
+
+.table-wrapper {
+  margin: 0;
+  box-shadow: 0 35px 50px #0003;
+}
+
+.fl-table {
+  border-collapse: collapse;
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 100%;
+  margin-top: 0;
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.fl-table td, .fl-table th {
+  text-align: center;
+  padding: 8px;
+}
+
+.fl-table td {
+  border-right: 1px solid #f8f8f8;
+  font-size: 12px;
+}
+
+.fl-table thead th {
+  color: #fff;
+  background: #4fc3a1;
+}
+
+.fl-table thead th:nth-child(odd) {
+  color: #fff;
+  background: #324960;
+}
+
+.fl-table tr:nth-child(2n) {
+  background: #f8f8f8;
+}
+
+@media (width <= 767px) {
+  .fl-table {
+    width: 100%;
+    display: block;
+  }
+
+  .table-wrapper:before {
+    content: "Scroll horizontally >";
+    text-align: right;
+    color: #fff;
+    padding: 0 0 10px;
+    font-size: 11px;
+    display: block;
+  }
+
+  .fl-table thead, .fl-table tbody, .fl-table thead th {
+    display: block;
+  }
+
+  .fl-table thead th:last-child {
+    border-bottom: none;
+  }
+
+  .fl-table thead {
+    float: left;
+  }
+
+  .fl-table tbody {
+    width: auto;
+    position: relative;
+    overflow-x: auto;
+  }
+
+  .fl-table td, .fl-table th {
+    vertical-align: middle;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    width: 120px;
+    height: 60px;
+    padding: 20px .625em .625em;
+    font-size: 13px;
+    overflow: hidden auto;
+  }
+
+  .fl-table thead th {
+    text-align: left;
+    border-bottom: 1px solid #f7f7f9;
+  }
+
+  .fl-table tbody tr {
+    display: table-cell;
+  }
+
+  .fl-table tbody tr:nth-child(odd), .fl-table tr:nth-child(2n) {
+    background: none;
+  }
+
+  .fl-table tr td:nth-child(odd) {
+    background: #f8f8f8;
+    border-right: 1px solid #e6e4e4;
+  }
+
+  .fl-table tr td:nth-child(2n) {
+    border-right: 1px solid #e6e4e4;
+  }
+
+  .fl-table tbody td {
+    text-align: center;
+    display: block;
+  }
+}
+
+.selected-row {
+  background-color: #a8d0e6;
+}
+
+.subheader {
+  color: #fff;
+  font-size: 26px;
+}
+
+/*# sourceMappingURL=dnister.5e4d1a8c.css.map */

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Page Structure</title>
+    <link rel="stylesheet" type="text/css" href="stations.css">
+</head>
+<body>
+    <div id="pageWrapper">
+        <div class="HeadertextBlock" id="textBlock3">
+            <p>Середньодніпровська ГЕС</p>
+        </div>
+        <div class="container" id="container3">
+
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    <th>Magnitude</th>
+                    <th>Type</th>
+                    <th>Place</th>
+                </tr>
+            </thead>
+            <tbody id="seismicData">
+                <!-- Data rows will be inserted here -->
+            </tbody>
+        </table>
+    </div>
+        </div>
+        <div class="subheader" id="textBlock4">
+            <p id="mapDescription"></p>
+        </div>
+        <div class="container" id="container4">
+            <img src="https://i.ibb.co/5vsns61/NDNU.png" alt="NDNU" border="0" style="width:100%; height:100%;">
+        </div>
+        <div class="textBlock" id="textBlock5">
+            <p>Текст для опису графіків</p>
+        </div>
+        <div class="container" id="container5">
+            <img src="https://i.ibb.co/2hhmwv0/nadd-2023-06-06-T170000-175960-PPP.png" alt="nadd-2023-06-06-T170000-175960-PPP" border="0" style="width:100%; height:100%;">
+        </div>
+        <div class="textBlock" id="textBlock6">
+            <p>Текст для опису графіків</p>
+        </div>
+    </div>
+
+    <script>
+
+    let selectedRow = null;
+
+
+    function fetchSeismicData() {
+    fetch('http://localhost:3000/api/events?station=DNIPR')
+        .then(response => response.json())
+        .then(events => {
+            var tableBody = document.getElementById('seismicData');
+            events.forEach(event => {
+                var row = document.createElement('tr');
+                row.innerHTML =
+                    "<td>" + event.time + "</td>" +
+                    "<td>" + event.mag + "</td>" +
+                    "<td>" + event.type + "</td>" +
+                    "<td>" + event.place + "</td>";
+                row.addEventListener('click', function() {
+                selectStation(event, row);
+            });
+                tableBody.appendChild(row);
+            });
+        })
+        .catch(error => console.error('Error loading events: ', error));
+}
+
+function selectStation(eventData, row) {
+    if (selectedRow) {
+        selectedRow.classList.remove('selected-row');
+    }
+    selectedRow = row;
+    selectedRow.classList.add('selected-row');
+
+    // Update event description
+    document.getElementById('mapDescription').innerText = "Подія: " + eventData.time;
+
+    // Update images for the selected event
+    document.querySelector('#container4 img').src = eventData.seismogram1;
+    document.querySelector('#container5 img').src = eventData.seismogram2;
+
+    // Update descriptions
+    document.getElementById('textBlock5').innerText = eventData.description1;
+    document.getElementById('textBlock6').innerText = eventData.description2;
+}
+
+document.addEventListener('DOMContentLoaded', fetchSeismicData);
+
+    </script>
+</body>
+</html>
