@@ -27,7 +27,7 @@ connection.connect(err => {
 // Route to fetch seismic data
 app.get('/api/events', (req, res) => {
     let station = req.query.station || 'NDNU'; // Default to 'NDNU' if no station is specified
-    const query = "SELECT time, mag, type, seismogram1, description1, seismogram2, description2, place FROM geoevents WHERE place = ?";
+    const query = "SELECT time, mag, type, seismogram1, description1, depth, seismogram2, description2, place FROM geoevents WHERE place = ?";
     connection.query(query, [station], (err, results) => {
         if (err) {
             res.status(500).send('Server error: ' + err.message);

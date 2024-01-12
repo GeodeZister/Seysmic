@@ -29,8 +29,10 @@ body {
 
 .textBlock {
   color: #fff;
-  margin: 10px 0;
-  font-size: 1em;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 0 20px;
+  font-size: 22px;
 }
 
 .HeadertextBlock {
@@ -59,7 +61,9 @@ h2 {
 }
 
 .table-wrapper {
+  max-height: 590px;
   margin: 0;
+  overflow-y: auto;
   box-shadow: 0 35px 50px #0003;
 }
 

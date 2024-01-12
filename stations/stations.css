@@ -31,9 +31,13 @@ body {
 
 .textBlock {
     color: white; /* Колір тексту */
-    font-size: 1.0em; /* Розмір шрифту */
+    font-size: 22px; /* Розмір шрифту */
     margin: 10px 0; /* Відступ зверху та знизу для текстового блоку */
+    max-width: 900px; /* Максимальна ширина блоку */
+    padding: 0 20px; /* Внутрішні відступи з обох сторін */
+    margin: 20px auto; /* Центрування блоку */
 }
+
 
 .HeadertextBlock {
     color: white; /* Колір тексту */
@@ -62,7 +66,9 @@ h2{
 
 /* Table Styles */
 
-.table-wrapper{
+.table-wrapper {
+    max-height: 590px; /* Встановіть максимальну висоту для контейнера таблиці */
+    overflow-y: auto; /* Додасть вертикальний скролбар, коли вміст буде більшим за максимальну висоту */
     margin: 0px 0px 0px;
     box-shadow: 0px 35px 50px rgba( 0, 0, 0, 0.2 );
 }

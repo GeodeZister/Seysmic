@@ -21,6 +21,7 @@
                     <th>Magnitude</th>
                     <th>Type</th>
                     <th>Place</th>
+                    <th>Depth</th>
                 </tr>
             </thead>
             <tbody id="seismicData">
@@ -48,11 +49,11 @@
 
     <script>let selectedRow = null;
 function fetchSeismicData() {
-    fetch("http://localhost:3000/api/events?station=DNIPR").then((response)=>response.json()).then((events)=>{
+    fetch("http://localhost:3000/api/events?station=TRDB").then((response)=>response.json()).then((events)=>{
         var tableBody = document.getElementById("seismicData");
         events.forEach((event)=>{
             var row = document.createElement("tr");
-            row.innerHTML = "<td>" + event.time + "</td>" + "<td>" + event.mag + "</td>" + "<td>" + event.type + "</td>" + "<td>" + event.place + "</td>";
+            row.innerHTML = "<td>" + event.time + "</td>" + "<td>" + event.mag + "</td>" + "<td>" + event.type + "</td>" + "<td>" + event.place + "</td>" + "<td>" + event.depth + "</td>"; // Add depth data to each row
             row.addEventListener("click", function() {
                 selectStation(event, row);
             });

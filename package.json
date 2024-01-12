@@ -1,7 +1,7 @@
 {
   "name": "seysmic",
   "version": "1.0.0",
-  "description": "Web for Money Project",
+  "description": "Seysmic",
   "main": "index.js",
   "scripts": {
     "start": "parcel ./home/home.html"
