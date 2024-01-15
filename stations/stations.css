@@ -193,3 +193,39 @@ h2{
     color: white;
     /* other styles */
 }
+
+/* Стилі для Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #324960; /* Колір фону меню */
+    padding: 10px 20px; /* Відступи всередині меню */
+    color: white; /* Колір тексту меню */
+    font-size: 20px; /* Розмір шрифту меню */
+}
+
+.navbar-title {
+    font-weight: bold;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-btn {
+background-color: #4FC3A1;
+border: none;
+padding: 10px 15px;
+margin-left: 10px;
+color: white;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s;
+}
+
+.navbar-btn:hover {
+background-color: #3da08a; /* Зміна кольору кнопки при наведенні */
+}
