@@ -91,7 +91,7 @@ db_credentials = {
     'password': 'admin1',
     'database': 'Seysmo'
 }
-csv_file_path = r'C:\ProgramData\MySQL\MySQL Server 8.0\Uploads\TRGR.xlsx - Sheet1 (1).csv'
+csv_file_path = r'C:\Users\Oleksandr\Downloads\NADD.xlsx - Sheet1.csv'
 
 
 # Execute the script

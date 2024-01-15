@@ -49,7 +49,7 @@
 
     <script>let selectedRow = null;
 function fetchSeismicData() {
-    fetch("http://localhost:3000/api/events?station=NDNU").then((response)=>response.json()).then((events)=>{
+    fetch("http://localhost:3000/api/events?station=NADD").then((response)=>response.json()).then((events)=>{
         var tableBody = document.getElementById("seismicData");
         events.forEach((event)=>{
             var row = document.createElement("tr");

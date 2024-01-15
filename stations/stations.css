@@ -182,6 +182,11 @@ h2{
     background-color: #a8d0e6; /* Background color for selected row */
 }
 
+.fl-table tr.selected-row {
+    background-color: #a8d0e6 !important; /* Перекриває інші стилі */
+}
+
+
 .subheader {
     /* CSS styles go here */
     font-size: 26px;

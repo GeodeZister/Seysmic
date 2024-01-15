@@ -181,6 +181,10 @@ h2 {
   background-color: #a8d0e6;
 }
 
+.fl-table tr.selected-row {
+  background-color: #a8d0e6 !important;
+}
+
 .subheader {
   color: #fff;
   font-size: 26px;
