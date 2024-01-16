@@ -60,7 +60,7 @@
 
 
     function fetchSeismicData() {
-    fetch('http://localhost:3000/api/events?station=TRDB')
+    fetch('http://195.22.122.50:3000/api/events?station=TRDB')
         .then(response => response.json())
         .then(events => {
             var tableBody = document.getElementById('seismicData');
